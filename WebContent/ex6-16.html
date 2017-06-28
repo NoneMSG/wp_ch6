@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+var f = function(arg1, arg2, arg3){
+	console.log(arg1);
+	console.log(arg2.name);
+	arg2.f();
+	arg3();
+};
+*/
+
+//함수에는 arguments 객체가 내장 되어 있다.
+//parameter가 동적일 때 사용
+var f = function(){
+	console.log(arguments[0]);
+	console.log(arguments[1]);
+	arguments[1].f();
+	arguments[2]();
+};
+
+//1회용으로 사용할 때 
+console.log((function(a, b, c){
+	return a+b+c;
+})(100,200,300));
+
+//함수 f에 파라미터 동적으로 전달
+f(10, {
+	 name:"acdc",
+	 f: function(){
+		 console.log("hello"+this.name);
+	 	}
+	 }, function(){
+		 console.log("hello");
+	} );
+ 
+//동적 파라미터 테스트
+ var f2 = function(){
+	 var lengthArgs = arguments.length;
+	 for(var i = 0 ; i < lengthArgs ; i++){
+		 console.log(arguments[i]);
+	 }
+ };
+ 
+ f2(10,20,30,40,50,60,70,80,90,100);
+ f2(10,20,30,40,50);
+ f2(10,20);
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+window.addEventListener("load",function(){
+	document.getElementById("my-sel").addEventListener("change",function(){
+		var elSelect=this;
+		console.log(elSelect.selectedIndex);
+		console.log(elSelect.options[elSelect.selectedIndex].value);
+	});
+	
+	document.getElementById("my-input").
+	addEventListener("change",function(){
+		console.log('changed');
+	});
+	
+	document.getElementById("my-input").
+	addEventListener("focus",function(){
+		console.log('focused');
+		//this.style.border= "3px solid #044419";
+		this.style.backgroundColor = "#90C0E8";
+	});
+	document.getElementById("my-input").
+	addEventListener("blur",function(){
+		console.log('blur');
+		//this.style.border= "1px solid #044419";
+		this.style.backgroundColor = "#fff";
+	});
+	
+	document.getElementById("my-check").
+	addEventListener("click",function(){
+		console.log(this.checked);
+	});
+	
+	
+	//document.getElementById("my-form").
+	//addEventListener("submit",function(event))
+	document.getElementById("my-form").
+	onsubmit= function(){
+		//validation
+		var inputEmail = document.getElementById("my-input");
+		
+		if(inputEmail.value==""){
+			alert("이메일은 필수 입력항목");
+			inputEmail.focus();
+			return false;
+		}
+		return false;
+	};
+	
+	//onload시 해당 element에 focus 함수 실행
+	document.getElementById("my-input").focus();
+});
+
+</script>
+</head>
+<body>
+<form action="join" method="post" id="my-form">
+<select id="my-sel">
+	<option value="v1">value1</option>
+	<option value="v2">value2</option>
+	<option value="v3">value3</option>
+	<option value="v4">value4</option>
+	<option value="v5">value5</option>
+</select>
+<br>
+
+아이디 입력: <input style="outline:none" type="text" id="my-input" value="">
+<br>
+약관 동의: <input type="checkbox" id="my-check">
+<br>
+
+<input type="submit" value="가입" id="my-submit">
+
+</form>
+
+</body>
+</html>

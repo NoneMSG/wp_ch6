@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+console.log(new Date());
+console.log(new Date(2013,0,13));
+
+
+var d = new Date(2013, 5, 23, 12, 30, 40);  //2013 년 6월 23일 12:30:40
+console.log(d);
+
+document.write(
+  " 년도: " + (d.getYear() + 1900) + "<BR>" + //1990~
+  " 월: " + (d.getMonth() + 1) + "<BR>" +  //0~11
+  " 일은: " + d.getDate() + "<BR>" + 
+  " 요일은: " + d.getDay() + "<BR>" +  //0:일요일
+  " 시는: " + d.getHours() + "<BR>" + 
+  " 분은: " + d.getMinutes() + "<BR>" + 
+  " 초는: " + d.getSeconds() + "<BR>" + 
+  " 밀리초: " + d.getMilliseconds() + "<HR>" );
+console.log(
+		  " 년도: " + (d.getYear() + 1900)  + //1990~
+		  " 월: " + (d.getMonth() + 1) +   //0~11
+		  " 일은: " + d.getDate() + 
+		  " 요일은: " + d.getDay() +  //0:일요일
+		  " 시는: " + d.getHours() +  
+		  " 분은: " + d.getMinutes() + 
+		  " 초는: " + d.getSeconds() +
+		  " 밀리초: " + d.getMilliseconds() );
+d.setYear(2014);  // 2014년 세팅
+document.write(d + "<HR>");
+document.write(d.getDay() + "<HR>");
+
+d.setMonth( 11 ); // 12월 세팅
+document.write(d + "<HR>");
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

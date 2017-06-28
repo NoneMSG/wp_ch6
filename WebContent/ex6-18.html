@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+
+var numericDate = function(date){
+	return (date.getYear()+1900) +"-"+
+	(date.getMonth()+1)+"-"+
+	(date.getDate())+"-"+
+	
+	(date.getHours())+":"+
+	(date.getMinutes())+":"+
+	(date.getSeconds());
+}
+var onload = function(){
+	var btn = document.getElementById("myBtn");
+	//var date = new Date();	
+	
+	btn.addEventListener("dblclick",function(){
+		//document.getElementById("demo").innerHTML=numericDate(new Date);
+		console.log('dbclick');
+	});
+	
+	btn.addEventListener("mouseup",function(){
+		//document.getElementById("demo").innerHTML=numericDate(new Date);
+		console.log('mouseup');
+	});
+	btn.addEventListener("mousedown",function(){
+		//document.getElementById("demo").innerHTML=numericDate(new Date);
+		console.log('mousedown');
+	});
+	btn.addEventListener("mouseover",function(){
+		//document.getElementById("demo").innerHTML=numericDate(new Date);
+		console.log('mouseover');
+	});
+	
+	btn.addEventListener("mouseout",function(){
+		//document.getElementById("demo").innerHTML=numericDate(new Date);
+		console.log('mouseout');
+	});
+	
+	btn.addEventListener("click",function(){
+		document.getElementById("demo").innerHTML=numericDate(new Date);
+	});
+}
+
+
+
+</script>
+
+</head>
+
+
+<p>버튼을 클릭하면  <em>displayDate()</em> 함수가 실행 됩니다.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+</body>
+</html>

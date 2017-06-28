@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+/*
+function mDown( obj ) {
+  obj.style.backgroundColor="#1ec5e5";
+  obj.innerHTML="버튼을 떼주세요.";
+}
+function mUp( obj ) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="클릭하세요!";
+} 
+*/
+
+//기본 데이터 타입
+var s = "hello world";
+var c = 'h';
+var i  = 10;
+var pi = 3.14;
+var b = true;
+var u ;
+var n = null;
+
+console.log(typeof s);
+console.log(typeof c);
+console.log(typeof i);
+console.log(typeof pi);
+console.log(typeof b);
+console.log(typeof u);
+console.log(typeof n);
+console.log('============');
+//object type
+var s2 = new String("hello world");
+var i2 = new Number(10);
+var b2 = new Boolean(false);
+var o2 = new Object();
+
+console.log(typeof s2);
+console.log(typeof i2);
+console.log(typeof b2);
+console.log(typeof o2);
+
+console.log('-------------------');
+
+console.log(s.toUpperCase());
+console.log(s2.toUpperCase());
+
+//null , undefiend 
+var var1, var2 =null;
+console.log(var1 + ","+var2);
+console.log(var1==var2);
+console.log(var1===var2);
+
+console.log("2"==2);
+console.log("2"===2);
+
+//동적 타이핑
+var var3 = 'string';
+console.log(typeof var3);
+
+var3=10;
+console.log(typeof var3);
+
+</script>
+</head>
+<body>
+<!-- 
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;">클릭하세요!</div>
+-->
+<h1>자바스크립트 데이터형 테스트</h1>
+</body>
+</html> 

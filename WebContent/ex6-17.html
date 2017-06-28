@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var onClicked = function(){
+		console.log('clicked');
+	};
+	
+	//dom이 구성되고 실행한다.
+	var onload = function(){
+		var el = document.getElementById("my-h1");
+		
+		//DOM level 0
+		el.onclick=onClicked;
+		
+		//DOM level 2
+		el = document.getElementById("my-h2");
+		el.addEventListener("click", function(){
+			console.log('clicked');
+		});
+		el.addEventListener("click",function(){
+			console.log('clikced2');
+		});
+	};
+	
+	window.addEventListener("load",onload);
+	
+</script>
+</head>
+<body>
+
+<h1 onclick="console.log('clicked');">Click on this text1!</h1>
+
+<h1 onclick="onClicked();">Click on this text2!</h1>
+
+<h1 id="my-h1">Click on this text3!</h1>
+
+<h1 id="my-h2">Click on this text4!</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.addEventListener("load",function(){
+		var elDiv = document.getElementById("my-box");
+		elDiv.addEventListener("mousedown",function(){
+			var el = this; //HTMLElement object
+			el.style.backgroundColor = "#00f";
+			el.innerHTML="마우스를 올리세요.";
+			
+			/*
+			//jQuery style
+			var $el = $(this);
+			$el.css("backgroundColor","#00f");
+			$el.update("please mouse button up");
+			$el.hide();
+			*/
+			
+			//hide element
+			//el.style.display="none";
+		});
+		
+		elDiv.addEventListener("mouseup",function(){
+			var el = this; //HTMLElement object
+			el.style.backgroundColor = "#f00";
+			el.innerHTML="클릭하세요!";
+			
+			
+			//el.style.display="block";
+		});
+	});
+</script>
+
+</head>
+<body>
+<div id="my-box"  
+	style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+	클릭하세요!
+</div>
+</body>
+</html>

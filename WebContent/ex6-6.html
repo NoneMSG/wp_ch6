@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var Rectangle = function(x1, y1, x2, y2, bgcolor){
+		this.x1 = x1;
+		this.x2 = x2;
+		this.y1 = y1;
+		this.y2 = y2;
+		this.bgcolor=bgcolor;
+	};
+Rectangle.prototype.borderColor="#111";
+Rectangle.prototype.show=function(){
+	/*
+	console.log(
+		"[width:"+ (this.x2-this.x1)+
+		", height:"+(this.y2-this.y1)+
+		", color:"+this.bgcolor+"]인 사각형 그림"
+	);
+	*/
+	document.write(
+		"<div style='position:absolute; "+
+		"left:"+this.x1 + "px;"+
+		"top:" + this.y1 + "px;"+
+		"width:"+ (this.x2- this.x1)+"px;"+
+		"height:"+(this.y2-this.y1)+"px;"+
+		"background-color:"+this.bgcolor +";"+
+		"border:2px solid"+this.borderColor +
+		"'></div>"
+	);
+};
+var rect1 = new Rectangle(10,20,30,40,'#f00');
+var rect2 = new Rectangle(310,401,501,601,'#f00');
+rect1.show();
+//rect2.show= ()=>{};
+rect2.show();
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

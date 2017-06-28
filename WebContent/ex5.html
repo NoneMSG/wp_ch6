@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//객체 생성1 생성자 함수 이용
+var o = new Object();
+o.name = "돌리";
+o.age= 30;
+o.info = function(){
+	console.log(this.name+', '+this.age);
+};
+o.info();
+
+//객체 생성2 : 리터럴 이용 literal
+var o2 = {};
+o2.name = "돌리";
+o2.age= 30;
+o2.info = function(){
+	console.log(this.name+', '+this.age);
+};
+o2.info();
+
+//객체 생성 3 : JSON (Java Script Object Notation)
+var json={
+		"name" : "둘리",
+		"age" : 30,
+		"info" : function(){
+			console.log(this.name+', '+this.age);
+		}
+};
+json.info();
+
+console.log(json.name);
+console.log(json.age);
+
+</script>
+</head>
+<body>
+	<h1>객체의 생성!</h1>
+</body>
+</html>
